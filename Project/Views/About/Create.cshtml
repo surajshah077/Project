@@ -1,0 +1,29 @@
+﻿@model About
+<label class="text-danger">@ViewData["ErrorMessage"]</label>
+<form asp-action="Create" asp-controller="About" method="post" enctype="multipart/form-data">
+ <div class="mb-3">
+        <label for="Image" class="form-label">Image</label>
+        <input type="file" name="file" asp-for="Image" class="form-control" id="Image" aria-describedby="Logo">
+    </div>
+    <div class="mb-3">
+        <label for="JoinDate" class="form-label">JoinDate</label>
+        <input type="date" asp-for="JoinDate" class="form-control" aria-describedby="JoinDate" />
+        <span asp-validation-for="JoinDate"></span>
+    </div>
+    <div class="mb-3">
+        <label for="EndDate" class="form-label">EndDate</label>
+        <input type="datetime-local" asp-for="EndDate" class="form-control" aria-describedby="EndDate" />
+   </div>
+    <div class="mb-3">
+        <label for="Title" class="form-label">Title</label>
+        <input type="text" asp-for="Title" class="form-control" aria-describedby="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <div class="mb-3">
+        <label for="TDescription" class="form-label">TDescription</label>
+        <textarea asp-for="TDescription" class="form-control" id="TDescription" aria-describedby="TDescription"></textarea>
+        <span asp-validation-for="TDescription"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+   
+</form>

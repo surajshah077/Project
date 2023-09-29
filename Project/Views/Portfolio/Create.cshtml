@@ -1,0 +1,30 @@
+﻿@model Portfolio
+<form asp-action="Create" asp-controller="Portfolio" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="Image" class="form-label">Image</label>
+        <input type="file" name="file" asp-for="Image" class="form-control" id="Image" aria-describedby="Image">
+    </div>
+    <div class="mb-3">
+        <label for="Topic" class="form-label">Topic</label>
+        <input type="text" asp-for="Topic" class="form-control" id="Title" aria-describedby="Title">
+        <span asp-validation-for="Topic"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <textarea asp-for="Description" class="form-control" aria-describedby="Description"></textarea>
+        <span asp-validation-for="Description"></span>
+    </div>
+     <div class="mb-3">
+        <label for="Client" class="form-label">Client</label>
+        <textarea asp-for="Client" class="form-control" aria-describedby="Client"></textarea>
+        <span asp-validation-for="Client"></span>
+    </div>
+     <div class="mb-3">
+        <label for="Category" class="form-label">Category</label>
+        <textarea asp-for="Category" class="form-control" aria-describedby="Category"></textarea>
+        <span asp-validation-for="Category"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a class="submit" class="btn bnt-primary" asp-action="Index" asp-controller="Portfolio">Back To List</a>
+</form>

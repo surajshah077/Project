@@ -1,0 +1,85 @@
+﻿@model CodeTable
+<form asp-action="Edit" asp-controller="CodeTable" method="post" >
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="HomeLogo" />
+ <div class="mb-3">
+        <label for="firstHeading" class="form-label">firstHeading</label>
+        <input type="text" asp-for="firstHeading" class="form-control" id="firstHeading" aria-describedby="firstHeading">
+        <span asp-validation-for="firstHeading"></span>
+    </div>
+    <div class="mb-3">
+        <label for="SecondHeading" class="form-label">SecondHeading</label>
+        <input type="text" asp-for="SecondHeading" class="form-control" id="SecondHeading" aria-describedby="SecondHeading">
+        <span asp-validation-for="SecondHeading"></span>
+    </div> <div class="mb-3">
+        <label for="buttonText" class="form-label">buttonText</label>
+        <input type="text" asp-for="buttonText" class="form-control" id="buttonText" aria-describedby="buttonText">
+        <span asp-validation-for="buttonText"></span>
+    </div> <div class="mb-3">
+        <label for="Services" class="form-label">Services</label>
+        <input type="text" asp-for="Services" class="form-control" id="Services" aria-describedby="Services">
+        <span asp-validation-for="Services"></span>
+    </div> <div class="mb-3">
+        <label for="serviceTitle" class="form-label">serviceTitle</label>
+        <input type="text" asp-for="serviceTitle" class="form-control" id="serviceTitle" aria-describedby="serviceTitle">
+        <span asp-validation-for="serviceTitle"></span>
+    </div> <div class="mb-3">
+        <label for="Portfolio" class="form-label">Portfolio</label>
+        <input type="text" asp-for="Portfolio" class="form-control" id="Portfolio" aria-describedby="Portfolio">
+        <span asp-validation-for="Portfolio"></span>
+    </div> <div class="mb-3">
+        <label for="portfolioTitle" class="form-label">portfolioTitle</label>
+        <input type="text" asp-for="portfolioTitle" class="form-control" id="portfolioTitle" aria-describedby="portfolioTitle">
+        <span asp-validation-for="portfolioTitle"></span>
+    </div> <div class="mb-3">
+        <label for="About" class="form-label">About</label>
+        <input type="text" asp-for="About" class="form-control" id="About" aria-describedby="About">
+        <span asp-validation-for="About"></span>
+    </div>
+    <div class="mb-3">
+        <label for="aboutTitle" class="form-label">aboutTitle</label>
+        <input type="text" asp-for="aboutTitle" class="form-control" aria-describedby="aboutTitle"/>
+        <span asp-validation-for="aboutTitle"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="teamDescription" class="form-label">teamDescription</label>
+        <input type="text" asp-for="teamDescription" class="form-control" aria-describedby="teamDescription" />
+        <span asp-validation-for="teamDescription"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="Contact" class="form-label">Contact</label>
+        <input type="text" asp-for="Contact" class="form-control" aria-describedby="Contact" />
+        <span asp-validation-for="Contact"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="contactTitle" class="form-label">contactTitle</label>
+        <input type="text" asp-for="contactTitle" class="form-control" aria-describedby="contactTitle" />
+        <span asp-validation-for="contactTitle"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="YourName" class="form-label">YourName</label>
+        <input type="text" asp-for="YourName" class="form-control" aria-describedby="YourName" />
+        <span asp-validation-for="YourName"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="YourEmail" class="form-label">YourEmail</label>
+        <input type="email" asp-for="YourEmail" class="form-control" aria-describedby="YourEmail" />
+        <span asp-validation-for="YourEmail"></span>
+    </div>
+    <div class="mb-3">
+        <label for="YourPhone" class="form-label">YourPhone</label>
+        <input type="number" asp-for="YourPhone" class="form-control" aria-describedby="YourPhone" />
+        <span asp-validation-for="YourPhone"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="YourMessage" class="form-label">YourMessage</label>
+        <input type="text" asp-for="YourMessage" class="form-control" aria-describedby="YourMessage" />
+        <span asp-validation-for="YourMessage"></span>
+    </div>  <div class="mb-3">
+        <label for="contactButtonText" class="form-label">contactButtonText</label>
+        <input type="text" asp-for="contactButtonText" class="form-control" aria-describedby="contactButtonText" />
+        <span asp-validation-for="contactButtonText"></span>
+    
+    <button type="submit" class="btn btn-primary">Edit</button>
+    <a asp-action="Index" asp-controller="CodeTable" class="btn btn-danger">Back To List</a>
+</form>

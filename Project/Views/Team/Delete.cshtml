@@ -1,0 +1,26 @@
+﻿@model Team
+<form asp-action="Delete" asp-controller="Team" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="TeamId" />
+    <input type="hidden" asp-for="Image" />
+    <input type="hidden" asp-for="Logo" />
+    <div class="mb-3">
+        <label for="Name" class="form-label">Title</label>
+        <input type="text" asp-for="Name" class="form-control" id="Name" aria-describedby="Name">
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Image" class="form-label">Image</label>
+        <input type="file" name="file" asp-for="Image" class="form-control" id="Image" aria-describedby="Image">
+    </div>
+    <div class="mb-3">
+        <label for="Degisnation" class="form-label">Degisnation</label>
+        <input type="text" asp-for="Degisnation" class="form-control" id="Degisnation" aria-describedby="Degisnation">
+        <span asp-validation-for="Degisnation"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Logo" class="form-label">Logo</label>
+        <input type="file" name="file" asp-for="Logo" class="form-control" id="Logo" aria-describedby="Logo">
+    </div>
+    <button type="submit" class="btn btn-primary">Delete</button>
+    <a asp-action="Index" asp-controller="Team" class="btn btn-primary">Back To List</a>
+</form>

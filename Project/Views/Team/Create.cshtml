@@ -1,0 +1,25 @@
+﻿@model Team
+<form asp-action="Create" asp-controller="Team" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" name="Name" asp-for="Name" class="form-control" id="Name" aria-describedby="Name">
+    </div>
+  
+    <div class="mb-3">
+        <label for="Image" class="form-label">Image</label>
+        <input type="file" name="Image" asp-for="Image" class="form-control" id="Image" aria-describedby="Image">
+ </div>
+    <div class="mb-3">
+        <label for="Degisnation" class="form-label">Degisnation</label>
+        <input type="text" asp-for="Degisnation" class="form-control" id="Degisnation" aria-describedby="Degisnation">
+        <span asp-validation-for="Degisnation"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Logo" class="form-label">Logo</label>
+        <input type="file" name="LogoFile" asp-for="Logo" class="form-control" id="Logo" aria-describedby="Logo">
+    </div>
+ 
+ 
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-action="Index" asp-controller="Team" class="btn btn-primary">Back To List</a>
+</form>
